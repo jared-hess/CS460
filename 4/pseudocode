@@ -1,0 +1,90 @@
+UserMenu
+	Print menu options
+	read user input
+	return users input
+end
+
+ExitProg
+	Destroy list
+	Exit program
+end
+
+BuildList
+	while (line read from file)
+		allocate new node
+		set value to what we read
+		set prev next pointer to current node
+		set prev pointer to last node
+		set next pointer to null
+	end while
+end
+
+MakeEmptyList //A list already has to have memory allocated, so just need to set the pointers
+	prev = NULL
+	next = NULL
+end
+
+InsertItem
+	allocate node for element X
+	set prev pointer to P location
+	set next to P->Next
+	if P->Next isn't NULL
+		set P->Next->Prev back to our new pointer
+	P->Next to our new node
+end
+
+DeleteItem
+	while current is not NULL
+		if current element is X to be deleted
+			delete node
+		current = next node
+	end while
+end
+
+SaveList
+	while current node is not null
+		write current element to file
+		next node
+	end while
+end
+
+DestroyList
+	if next node is not null
+		destroyList next
+	free current
+end
+
+IsEmpty
+	If Next pointer is NULL
+		return empty
+	If it's not
+		return not empty
+end
+
+IsFirst
+	If Prev is null
+		return first
+	otherwise
+		return not first
+end
+
+IsLast
+	If Next pointer is Null
+		return last
+	otherwise
+		return not last
+end
+
+DeleteList
+	DestroyList(current->Next)
+	current->Next = NULL
+end
+
+main
+	make list
+	
+	while user hasn't exited
+		switch (choice)
+			(Case for each menu uption with appropriate function)
+		end switch
+	end while

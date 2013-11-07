@@ -1,0 +1,55 @@
+//Stack Stuff
+pop
+	set head to point to top->next
+	return old top
+end
+
+top (stack)
+	return stack->top
+end
+
+push(node)
+	set pointer of node to point to top
+	set head to point to node
+	return
+end
+
+getNode(stack, index)
+	for i in index
+		next node
+	return node
+end
+
+parseFile(inputFile, stack)
+	read a line from the file
+	push to stack
+end
+
+giveTest(stack)
+	get time
+	format time
+	
+	for i in 5
+		current = getNode(stack, rand)
+		print question
+		scan answer
+		update score
+		print to user file
+	print to test file
+end
+
+main
+	do while more input
+		make stack
+		get ID
+		parse info to get input file name
+		open input file
+		parse info to get output file names
+		open output files
+		parseFile(inputFile, stack)
+		giveTest(stack)
+		destroy stack
+		print(more tests?)
+		scan answer
+	end
+end
