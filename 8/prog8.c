@@ -29,7 +29,7 @@ Created for the fulfillment of the requirements for CS460 and should hereafter b
 #include <ctype.h>
 #include <sys/time.h>
 
-int size = 10000;
+int size = 100000;
 //Required Function Prototypes
 char UserMenu( char *opt ); /* display menu and receive option */ 
 void PopulateArrayDes( int *A ); /* populate array A in descending order */ 
@@ -58,9 +58,9 @@ int main()
 			case '3': CopyArrays(desArray,myArray);break;
 			case '4': DisplayArray10Items(myArray);break;
 			case '5': ShellSortAsc(myArray);break;
-			case '6': HeapSortAsc(myArray);break;
+			case '6': ShellSortAsc(myArray);break;
 			case '7': CalculateTimeSS(myArray);break;
-			case '8': CalculateTimeHS(myArray);break;
+			case '8': CalculateTimeSS(myArray);break;
 		}//switch
 	}//while
 	ExitProg();
@@ -139,7 +139,7 @@ void HeapSortAsc( int *I ) /* sort array I in ascending order using heap sort al
 		tmp = I[0];
 		I[0] = I[i];
 		I[i] = tmp;
-		siftDown(I,0,i-1);
+		siftDown(I,0,i);
 	}
 	return;
 }
