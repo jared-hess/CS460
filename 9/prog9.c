@@ -18,7 +18,26 @@ Created for the fulfillment of the requirements for CS460 and should hereafter b
 
 //Notes for the grader:
 //
-//
+//Pseudocode:
+//quicksort(array)
+//	if 0 or 1, already sorted
+//		return
+//	if 2 
+//		swap if necessary
+//		return
+//	else (3 or more)
+//		choose pivot
+//		partitions into 2 arrays, A and B
+//		for every element in array
+//			if element larger than pivot 
+//				go in B
+//			else 
+//				go in A
+//		quicksort A
+//		quicksort B
+//		array = concatenation of A and B
+//		return	
+
 
 #include <stdio.h>
 #include <stdlib.h>
