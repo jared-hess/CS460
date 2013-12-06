@@ -2,6 +2,10 @@
 //Names: Jared Hess, Brian Coffman, Travis Whitty
 //
 
+//Notes to grader:
+//To compile: gcc main.c
+//That's it!
+
 //Just general useful stuff
 #include <stdio.h>
 #include <stdlib.h>
@@ -12,7 +16,7 @@
 #include <limits.h>
 
 //My files
-//#include "avl.h"
+#include "avl.h"
 
 //Structure Definitions
 typedef struct Movie
